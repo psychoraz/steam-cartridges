@@ -21,7 +21,7 @@ STEAM_API_KEY=<steam_api_key>
 STEAMGRIDDB_API_KEY=<steamgriddb_api_key>
 ```
 
-You can also specify the port on the `.env` file with `PORT=<port_number>`
+You can also specify the port on the `.env` file with `PORT=<port_number>`, and the language to retrieve the info from steam using `LANG=<language>` (for example, `LANG=spanish`), it's english by default.
 
 Steam API Key is used to search for the user games, and to gather game info as description as release date.
 SteamGridDB API Key is used to get covers. You could do this with the Steam API Key, but SteamGridDB has a lot more covers and filters, and I was specifically searching for "square" sizes.
@@ -35,7 +35,7 @@ It will run by default on http://localhost:3000
 `public/constants.js` contains multiple handy constants to manage your collection
 `server.js` contains the constant `const imageMap`, handy for manually changing artwork
 
-### boxes and stands
+## boxes and stands
 
 - I used this coin boxes, found on ali express: https://es.aliexpress.com/item/1005007281990397.html
 - As for the stands, I use this ones: https://es.aliexpress.com/item/1005007621229061.html

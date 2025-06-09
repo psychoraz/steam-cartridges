@@ -108,7 +108,7 @@ app.get('/game-info/:appid/:title', async (req, res) => {
   const { appid, title } = req.params;
 
   try {
-    const url = `https://store.steampowered.com/api/appdetails?appids=${appid}&l=spanish`;
+    const url = `https://store.steampowered.com/api/appdetails?appids=${appid}&l=${process.env.LANG || 'english'}`;
     const response = await fetch(url);
     const data = await response.json();
 
