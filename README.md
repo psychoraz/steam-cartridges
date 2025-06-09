@@ -36,9 +36,10 @@ It will run by default on http://localhost:3000
 `server.js` contains the constant `const imageMap`, handy for manually changing artwork
 
 ### boxes and stands
-I used this coin boxes, found on ali express: https://es.aliexpress.com/item/1005007281990397.html
-As for the stands, I use this ones: https://es.aliexpress.com/item/1005007621229061.html
-Once printed, each "game cover" (back, side and front) should meassure around `9.1mm`.
+
+- I used this coin boxes, found on ali express: https://es.aliexpress.com/item/1005007281990397.html
+- As for the stands, I use this ones: https://es.aliexpress.com/item/1005007621229061.html
+- Once printed, each "game cover" (back, side and front) should meassure around `9.1mm`.
 
 ![image](https://github.com/user-attachments/assets/f0868db9-1e51-4e00-9fda-03a58ac132da)
 ![image](https://github.com/user-attachments/assets/eb976901-eaed-4f50-b25f-54dc094b6701)
