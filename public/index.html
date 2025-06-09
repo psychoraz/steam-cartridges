@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="https://store.steampowered.com/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./constants.js"></script>
+    <script src="./main.js"></script>
+    <script type="module">
+      import { checkProfile, filterGames, copyAllAppIds } from './main.js';
+      window.checkProfile = checkProfile;
+      window.filterGames = filterGames;
+      window.copyAllAppIds = copyAllAppIds;
+    </script>
+  </head>
+  <body>
+    <div class="controls">
+      <div class="search">
+        <input type="text" id="steamInput" placeholder="Steam Vanity or ID" />
+        <button onclick="checkProfile()">Generate covers</button>
+      </div>
+
+      <div class="filter">
+        <input
+          type="text"
+          id="filterInput"
+          placeholder="Steam Title or AppID"
+          oninput="filterGames()"
+          disabled="disabled"
+        />
+      </div>
+
+      <div class="pagination">
+        <button onclick="copyAllAppIds()" disabled="disabled">CC</button>
+      </div>
+    </div>
+
+    <div class="page" id="results"></div>
+  </body>
+</html>

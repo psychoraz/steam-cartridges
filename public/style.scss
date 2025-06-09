@@ -1,0 +1,212 @@
+// Variables
+$primary-color: #161d26;
+$secondary-color: #c7d5e0;
+$tertiary-color: #1a2a3d;
+$accent-color: #a8cce1;
+$button-bg: #164a6b;
+$button-color: #fff;
+
+$font-family: sans-serif;
+$page-width: 203mm;
+$square-size: 47mm;
+$side-size: 3.3mm;
+
+// Global Styles
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  color: black;
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+button {
+  &:disabled {
+    color: silver !important;
+  }
+}
+
+// Page Layout
+.page {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 7mm 0;
+  width: $page-width;
+  place-content: baseline center;
+}
+
+// Mini Disc
+.mini-disc {
+  background: transparent;
+  display: flex;
+  flex-direction: row-reverse;
+  height: $square-size;
+  width: $square-size + $square-size + $side-size;
+}
+
+// Controls
+.controls {
+  background: $accent-color;
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  margin: auto;
+  padding: 1em;
+  position: sticky;
+  top: 0;
+  width: $page-width;
+  z-index: 100;
+
+  button {
+    background: $button-bg;
+    border: none;
+    border-radius: 2px;
+    color: $button-color;
+    font-size: 9pt;
+    outline: 0;
+    padding: 0.5em;
+  }
+
+  input {
+    border: none;
+    border-radius: 2px;
+    font-size: 10pt;
+    outline: 0;
+    padding: 0.5em;
+  }
+
+  > div {
+    white-space: nowrap;
+  }
+
+  .filter {
+    width: 100%;
+
+    input {
+      width: 100%;
+    }
+  }
+}
+
+// Front, Back, and Side
+.front,
+.back {
+  width: $square-size;
+  height: $square-size;
+}
+
+.front {
+  background-color: $primary-color;
+  position: relative;
+
+  .cover-container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+
+    .cover {
+      height: 100%;
+      position: absolute;
+    }
+  }
+}
+
+.side {
+  align-items: center;
+  background: $tertiary-color;
+  color: $secondary-color;
+  display: flex;
+  height: $square-size;
+  width: $side-size;
+  flex-direction: row;
+  font-size: 6pt;
+  gap: 5px;
+  justify-content: flex-start;
+  padding: 3px 0;
+  text-orientation: mixed;
+  writing-mode: sideways-lr;
+  transform: rotate(180deg);
+
+  img {
+    transform: rotate(270deg);
+    height: auto;
+    margin-bottom: 2.5px;
+    width: 2.5mm;
+  }
+
+  .text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+}
+
+.back {
+  background-color: $primary-color;
+  color: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  font-size: 6pt;
+  gap: 6px;
+  justify-content: flex-start;
+  padding: 9px;
+
+  .title {
+    font-size: 8pt;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .extra {
+    margin-top: auto;
+    text-align: right;
+  }
+}
+
+#loadingcover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  height: $square-size;
+  width: $square-size + $square-size + $side-size;
+
+  > img {
+    height: 100%;
+  }
+}
+
+// Media Queries
+@media print {
+  .controls {
+    display: none;
+  }
+
+  button,
+  input {
+    display: none;
+  }
+
+  .page {
+    break-inside: avoid;
+    height: 297mm;
+    page-break-after: always;
+    page-break-inside: avoid;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
