@@ -44,3 +44,4 @@ It will run by default on http://localhost:3000
 ![image](https://github.com/user-attachments/assets/f0868db9-1e51-4e00-9fda-03a58ac132da)
 ![image](https://github.com/user-attachments/assets/eb976901-eaed-4f50-b25f-54dc094b6701)
 ![image](https://github.com/user-attachments/assets/c4dfca6c-7507-4714-8695-53558fc8512f)
+<img width="794" alt="image" src="https://github.com/user-attachments/assets/ee666844-fa40-4839-9169-d94d63031c66" />
